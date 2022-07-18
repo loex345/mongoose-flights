@@ -1,4 +1,4 @@
-const mongoose = reguire('mongoose');
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
@@ -21,3 +21,5 @@ const flightSchema = new mongoose.Schema({
   }
 
 });
+
+module.exports = mongoose.model('Flight', flightSchema);
