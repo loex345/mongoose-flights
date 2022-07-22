@@ -18,11 +18,14 @@
     <h5>No Arrivals Yet</h5>
 <% } %>
 
-<div>Tickets</div>
-<div>Seat</div>
-<div><%=flight.seat %></div>
-<div>Price</div>
-<div><%=flight.price %></div>
+
+<% tickets.forEach(function(t) { %>
+    <div>Tickets</div>
+    <div>Seat</div>
+    <div><%=t.seat %></div>
+    <div>Price</div>
+    <div><%=t.price %></div>
+<% }); %>
 
 <br><br><h2>New Ticket</h2>
 <a href="/flights/<%=flight._id %>/tickets/new" class="button">Add New Ticket</a>
